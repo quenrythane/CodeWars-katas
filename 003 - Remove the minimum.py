@@ -1,3 +1,4 @@
+# https://www.codewars.com/kata/563cf89eb4747c5fb100001b
 """
 The museum of incredible dull things
 The museum of incredible dull things wants to get rid of some exhibitions. Miriam, the interior architect, comes up with
