@@ -7,7 +7,8 @@ class Node:
         self.left = L
         self.right = R
         self.value = n
-Your task is to return the list with elements from tree sorted by levels, which means the root element goes first, then root children (from left to right) are second and third, and so on.
+Your task is to return the list with elements from tree sorted by levels, which means the root element goes first, then
+root children (from left to right) are second and third, and so on.
 
 Return empty list if root is None.
 
@@ -30,25 +31,14 @@ Should return following list:
 [1,8,4,3,5,7]
 """
 
-inp1 = """
-                1
-            8        4
-              3        5
-                         7
-"""
-
-inp2 = """
-                1
-            2        3
-              4        5
-                         7
-"""
 
 class Node:
     def __init__(self, L, R, n):
         self.left = L
         self.right = R
         self.value = n
+
+
 
 i2 = Node(
     Node(
@@ -61,15 +51,24 @@ i2 = Node(
         3),
     1)
 
+
 def tree_by_levels(node):
-    return node.split() if node else []
+    if node:
+        tree_values = []
+        def print_tree(self):
+            if self.left:
+                print_tree(self.left)
+            tree_values.append(self.value)
+            if self.right:
+                print_tree(self.right)
+            return tree_values
 
-print(i2)
-print(i2.value)  # level 1
+        print_tree(node).insert(0, node.value)
+        return tree_values
+    else:
+        return []
 
-print(i2.left.value)  # level 2 left
-print(i2.right.value)  # level 2 right
 
-print(i2.left.left.value)  # level 3 left left
-print(i2.left.right.value)  # level 3 left left
-
+x = tree_by_levels(i2)
+print(x)
+print((tree_by_levels(None)))
