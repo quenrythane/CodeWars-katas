@@ -2,6 +2,7 @@
 
 ### I attach here exercises and solutions for katas from codewars.com portal.
 ### Enjoy!
+<br>
 
 
 ## Practice catalog contains katas sorted by kyu level
