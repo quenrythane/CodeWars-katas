@@ -25,3 +25,7 @@ for i in range(10000):
 print("coś")
 
 
+print(bool(-1))
+print(bool(1))
+print(bool(0))
+

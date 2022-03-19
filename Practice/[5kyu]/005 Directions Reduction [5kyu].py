@@ -114,7 +114,7 @@ def dirReduc6(arr):
         if arr[i+1] == opp:
             arr.pop(i+1)
             arr.pop(i)
-            if i>0:
+            if i > 0:
                 i -= 1
         else:
             i += 1
