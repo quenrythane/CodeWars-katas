@@ -17,6 +17,9 @@ def make_readable(seconds):
     return str(f"{('0'+str((x.tm_mday - 1) * 24 + x.tm_hour))[-2:]}:{('0'+str(x.tm_min))[-2:]}:{('0'+str(x.tm_sec))[-2:]}")
 
 
+def make_readable2(s):
+    return '{:02}:{:02}:{:02}'.format(s / 3600, s / 60 % 60, s % 60)
+
 print(make_readable(120))
 print(make_readable(359999))
 

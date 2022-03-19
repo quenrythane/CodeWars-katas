@@ -4,3 +4,9 @@ for i in range(20):
     open(f'{x}.py', 'w')
 """
 
+ml = [1, 2, 3, 4]
+# ml[-1] # = 4
+
+print(ml and 4)
+
+
