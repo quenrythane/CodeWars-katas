@@ -25,3 +25,9 @@ def rgb2(r, g, b):
     return ''.join([hex(i)[2:].upper().zfill(2) for i in [i if i in range(0, 256) else 0 if i < 0 else 255 for i in [r, g, b]]])
 
 
+def rgb3(r, g, b):
+    round = lambda x: min(255, max(x, 0))
+    return ("{:02X}" * 3).format(round(r), round(g), round(b))
+
+
+
