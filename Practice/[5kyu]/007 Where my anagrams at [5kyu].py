@@ -22,3 +22,8 @@ anagrams('laser', ['lazing', 'lazy',  'lacer']) => []
 def anagrams(word, words):
     return [w for w in words if sorted([c for c in word]) == sorted([c for c in w])]
 
+
+def anagrams2(word, words):
+    return [w for w in words if sorted(word) == sorted(w)]
+
+
