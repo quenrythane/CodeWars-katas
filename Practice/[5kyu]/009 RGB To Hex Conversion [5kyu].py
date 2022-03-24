@@ -13,7 +13,7 @@ rgb(148, 0, 211) # returns 9400D3
 """
 
 
-def rgb2(r, g, b):
+def rgb(r, g, b):
     result = []
     for i in r, g, b:
         if i not in range(0, 256):
@@ -21,16 +21,7 @@ def rgb2(r, g, b):
         result.append(hex(i)[2:].upper().zfill(2))
     return ''.join(result)
 
-def rgb(r, g, b):
+def rgb2(r, g, b):
     return ''.join([hex(i)[2:].upper().zfill(2) for i in [i if i in range(0, 256) else 0 if i < 0 else 255 for i in [r, g, b]]])
-
-
-"""
-print(rgb(-100, 100, 300))
-print(rgb(-100, 100, 300))
-"""
-from timeit import timeit as t
-a, b, c = 20, 100, 1000
-print(t(str(rgb2(a, b, c)), number=10000))
 
 
