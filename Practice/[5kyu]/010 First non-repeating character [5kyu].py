@@ -20,3 +20,38 @@ def first_non_repeating_letter(string):
         if v == 1:
             return string[string.lower().find(k)]
     return ""
+
+
+def first_non_repeating_letter1(string):
+    return ''.join([i for i in string if string.lower().count(i.lower()) == 1][:1])
+
+
+def first_non_repeating_letter2(string):
+    string_lower = string.lower()
+    for i, letter in enumerate(string_lower):
+        if string_lower.count(letter) == 1:
+            return string[i]
+
+
+def first_non_repeating_letter3(string):
+    singles = [i for i in string if string.lower().count(i.lower()) == 1]
+    return singles[0] if singles else ''
+
+
+def first_non_repeating_letter4(string):
+    for i in string:
+        if string.lower().count(i.lower()) == 1:
+            return i
+    return ''
+
+
+def first_non_repeating_letter5(string):
+    for i in string:
+        if string.lower().count(i.lower()) == 1:
+            return i
+    return ''
+
+
+def first_non_repeating_letter7(string):
+    return next((x for x in string if string.lower().count(x.lower()) == 1), '')
+
