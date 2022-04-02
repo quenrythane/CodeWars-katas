@@ -23,8 +23,9 @@ After "z" comes "a"
 If function receive N < 0 should return:
 """
 
-
 from string import ascii_lowercase
+
+
 def grid(N):
     if N < 0:
         return None
@@ -34,13 +35,11 @@ def grid(N):
         result += ' '.join(low[i:N+i]) + '\n'
     return result[:-1]
 
-from string import ascii_lowercase
+
 def grid2(N):
     low = ascii_lowercase*10
-    return None if N < 0 else ''.join([' '.join(low[i:N+i]) + '\n' for i in range(N)])[:-1]
+    return None if N < 0 else ''.join([' '.join(low[i % 26:(N + i % 26)]) + '\n' for i in range(N)])[:-1]
 
 
-print(grid(4), "\n")
-print(grid2(1), "\n")
 print(grid2(4), "\n")
-print(grid(-1), "\n")
+print(grid2(270), "\n")
