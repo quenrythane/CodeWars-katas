@@ -41,5 +41,20 @@ def grid2(N):
     return None if N < 0 else ''.join([' '.join(low[i % 26:(N + i % 26)]) + '\n' for i in range(N)])[:-1]
 
 
+def grid3(n):
+    if n < 0:
+        return None
+    result = []
+    for i in range(n):
+        result.append(' '.join([ascii_lowercase[(i + j) % 26] for j in range(n)]))
+    return '\n'.join(result)
+
+
+def grid4(n):
+    return None if n < 0 else '\n'.join([' '.join([ascii_lowercase[(i + j) % 26] for j in range(n)]) for i in range(n)])
+
+
+
 print(grid2(4), "\n")
-print(grid2(270), "\n")
+print(grid3(6), "\n")
+print(grid4(270), "\n")
